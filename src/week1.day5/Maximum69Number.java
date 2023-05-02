@@ -1,4 +1,4 @@
-package day5;
+package week1.day5;
 
 import org.junit.Test;
 
@@ -13,7 +13,7 @@ public class Maximum69Number {
 
 	@Test
 	public void example() {
-		int num = 969;
+		int num = 9669;
 		maximumNumber(num);
 	}
 

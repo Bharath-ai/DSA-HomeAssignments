@@ -1,4 +1,4 @@
-package day2;
+package week1.day2;
 
 import org.junit.Test;
 
@@ -6,7 +6,7 @@ public class RemoveElement {
 
 	@Test
 	public void example() {
-		int[] arr = { 1, 5, 4, 6, 5, 9 };
+		int[] arr = { 5, 1, 4, 6, 5, 1 };
 		int removeElement = 5;
 		removeElementFromArray(arr, removeElement);
 	}

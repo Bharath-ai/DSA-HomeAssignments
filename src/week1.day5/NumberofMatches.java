@@ -1,4 +1,4 @@
-package day5;
+package week1.day5;
 
 import org.junit.Test;
 
@@ -7,7 +7,7 @@ public class NumberofMatches {
 	@Test
 	public void example1()
 	{
-	int num = 101;
+	int num = 7;
 	countMatches(num);
 	}
 

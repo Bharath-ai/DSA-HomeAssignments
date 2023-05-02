@@ -1,4 +1,4 @@
-package day1;
+package week1.day1;
 
 import org.junit.Test;
 
@@ -18,7 +18,7 @@ public class ArrayPlusOne {
 //				Thus, the result should be [1,2,4].
 	@Test
 	public void example() {
-		int[] arr1 = { 1, 2, 3,4,5,6};
+		int[] arr1 = {1,2,3,4,5,6};
 		finalResult(arr1);
 
 	}
@@ -26,7 +26,7 @@ public class ArrayPlusOne {
 	private void finalResult(int[] arr1) {
 
 		// condition 1
-		if(!(arr1.length >= 1 && arr1.length <= 100))
+		if(arr1.length >= 1 && arr1.length <= 100)
 			System.out.println("Condition 1 Passed");
 		else
 			System.err.println("Condition 1 Mismatch");
@@ -48,6 +48,23 @@ public class ArrayPlusOne {
 		//adding 1 with interger value
 		digitValue = digitValue + 1;
 		System.out.println(digitValue);
+		
+		int[] arr2 = new int[arr1.length];
+		int temp = 0;
+		int j=arr1.length;
+		while(digitValue>0)
+		{
+			    temp = digitValue%10;
+				arr2[j-1] = temp;
+				digitValue = digitValue/10;
+				--j;
+			
+		}
+		
+		for(int k=0; k<arr2.length;k++)
+		{
+			System.out.print(arr2[k]+",");
+		}
 		
 //		int i=arr1.length-1;
 //		int[] arr2 = new int[arr1.length];

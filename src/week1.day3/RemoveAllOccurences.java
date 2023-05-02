@@ -1,5 +1,6 @@
-package day3;
+package week1.day3;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class RemoveAllOccurences {
@@ -15,12 +16,14 @@ public class RemoveAllOccurences {
 
 	@Test
 	public void example1() {
-		int[] arr = {8,1,2,4,1,4,1,4};
+		int[] arr = {1,1,1,5,5,1,1,1};
+		int[] op = {1,1,1,1,1,1};
 		int indexToRemove = 3;
-		removeAllOccurences(arr, indexToRemove);
+		//int[] arr1 = removeAllOccurences(arr, indexToRemove);
+		Assert.assertArrayEquals(removeAllOccurences(arr, indexToRemove), op);
 	}
 
-	private void removeAllOccurences(int[] arr, int indexToRemove) {
+	private int[] removeAllOccurences(int[] arr, int indexToRemove) {
 		int[] arr1 = new int[arr.length];
 		for (int i = 0, j = 0; i < arr.length; i++) {
 			if (arr[i] != arr[indexToRemove]) {
@@ -31,10 +34,13 @@ public class RemoveAllOccurences {
 
 		for (int k = 0; k < arr1.length; k++) {
 			if (arr1[k] != 0) {
+				arr1[k] = k;
 				System.out.print(arr1[k]);
 			} else
 				break;
 		}
+		
+		return arr1;
 	}
 
 }
